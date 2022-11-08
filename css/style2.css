@@ -1,0 +1,10 @@
+.container {
+    background-color: blanchedalmond;
+    padding: 10px;
+}
+
+.container div {
+    border-color: black;
+    border: 1px solid brown;
+
+}
