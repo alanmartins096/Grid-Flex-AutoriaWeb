@@ -6,22 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EAJ News</title>
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Carrega o icone de menu para tela pequenas -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 <body>
     <header class="header">
         <h1 class="logomarca"><span>EAJ News</span></h1>
-        <ul class="menu">
+        <ul class="menu" id="menuRe">
         <li><a href="#" title="Eleições"><span>ELEIÇÕES</span></a></li>
         <li><a href="#" title="Esportes"><span>ESPORTES</span></a></li>
         <li><a href="#" title="Filmes"><span>FILMES</span></a></li>
         <li><a href="#" title="Musica"><span>MUSICA</span></a></li>
         <li><a href="#" title="Vivabem"><span>VIVABEM</span></a></li>
+        <a href="javascript:void(0);" class="icon" onclick="MenuResp()"><i class="fa fa-bars"></i></a>
         </ul>
     </header>
     <div class="container">
         
-        <h1>Destaques</h1>
-        <section class="grid1">
+        <h1 class="titulo">Destaques</h1>
+        <section class="destaques">
             <div class="grid1-item">
               <img src="./image/sustentabilidade.jpg">
               <p>Agroecologia é mais um nome para o amor a terra.</p>
@@ -43,47 +47,31 @@
                 <p>Vespas 'ajudam' polícia a prender fugitivo na Alemanha.</p>
             </div>
         </section>
-        <h1>Noticias</h1>
-        <section class="grid1">
+        <h1 class="titulo">Últimas notícias</h1>
+        <section class="noticias">
             <div>
-              <img src="./image/lobo1.jpg">
-              <p>Legenda</p>
+              <img src="./image/bozotriste.jpg">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue commodo luctus. Cras placerat sit amet lorem at sagittis. Vestibulum placerat et diam at fermentum.</p>
             </div>
             <div>
-              <img src="./image/lobo2.jpg">
-              <p>Legenda</p>
+              <img src="./image/bozotriste.jpg">
+              <p>Proin ultricies massa sed eros iaculis, quis interdum velit fringilla. Curabitur mollis mi et metus lacinia, et pretium neque suscipit. Proin condimentum tellus ultricies erat euismod aliquet.</p>
             </div>
             <div>
-              <img src="./image/lobo3.jpg">
-              <p>Legenda</p>
+              <img src="./image/bozotriste.jpg">
+              <p>Duis mauris mi, pellentesque nec dolor eu, hendrerit pulvinar ante. Vestibulum et vehicula lacus. Curabitur ultrices, quam at consectetur convallis, eros nisi finibus risus, eget bibendum dolor urna et ligula.</p>
             </div>
             <div>
-              <img src="./image/lobo2.jpg">
-              <p>Legenda</p>
+              <img src="./image/bozotriste.jpg">
+              <p>Suspendisse interdum congue massa. Mauris non rutrum lectus, faucibus pulvinar mi. Praesent tincidunt quis mauris ut vestibulum. Integer sapien sem, iaculis nec viverra sit amet, sagittis venenatis arcu.</p>
             </div>
             <div>
-              <img src="./image/lobo1.jpg">
-              <p>Legenda</p>
+              <img src="./image/bozotriste.jpg">
+              <p>Ut vel hendrerit ante. Donec sed quam dignissim lorem egestas feugiat nec vel est. Nunc ultricies erat augue, a bibendum quam pretium quis.</p>
             </div>
             <div>
-              <img src="./image/lobo3.jpg">
-              <p>Legenda</p>
-            </div>
-            <div>
-              <img src="./image/lobo2.jpg">
-              <p>Legenda</p>
-            </div>
-            <div>
-              <img src="./image/lobo1.jpg">
-              <p>Legenda</p>
-            </div>
-            <div>
-              <img src="./image/lobo3.jpg">
-              <p>Legenda</p>
-            </div>
-            <div class="anuncio">
-              <img src="./image/lobo1.jpg">
-              <p>Anúncio</p>
+              <img src="./image/bozotriste.jpg">
+              <p>Nulla est dui, viverra et lacus vehicula, condimentum finibus sem. Duis eu quam a nisl bibendum sodales sit amet vel erat. Nulla at libero dui.</p>
             </div>
           </section>
     </div>
@@ -98,7 +86,17 @@
                 <li>João Victor</li>
             </ul>
            </div>
-        <div class="parte3"><p>Siga a EAJ News:</p></div>
-    </footer>      
+        <div class="social"><p>Siga a EAJ News:</p></div>
+    </footer>
+    <script>
+      function MenuResp() {
+        var x = document.getElementById("menuRe");
+        if (x.className === "menu") {
+          x.className += " responsive";
+        } else {
+          x.className = "menu";
+        }
+      }
+      </script>      
 </body>
 </html>

@@ -1,14 +1,20 @@
 body {
     margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .container {
     width: 80%;
     margin: 0 auto;
     display: grid;
+    max-width: 1400px;
     grid-template-columns: 100%;
-    grid-template-rows: 60px auto 100px;
-    grid-template-areas:    "destaques"
-                            "secao";
+    grid-template-rows: auto auto auto 100px;
+    grid-template-areas:    "titulo1"
+                            "secao1"
+                            "titulo2"
+                            "secao2"
+                            "secao2";
+
 }
 .header {
     display: flex;
@@ -23,13 +29,29 @@ body {
     background-position: right;
     background-repeat: no-repeat;
 }
-section {
-    grid-area: secao;
+.titulo {
+  border-bottom: 1px solid;
+}
+.destaques {
+    grid-area: secao1;
     background-color: #E05DA1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin: 0 auto;
+    padding: 10px;
  }
+.noticias {
+  grid-area: secao2;
+  background-color: #38e66c;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+
+} 
 
 .footer {
-        grid-area: rodape;
         display: flex;
         flex-wrap: wrap;
         justify-content:space-around;
@@ -43,78 +65,99 @@ section {
     width: 25%;
  }
 
+.social {
+    flex-wrap: wrap;
+    align-items: center;
+    margin: -0.25rem;
+    display: flex;
+} 
+
 h1 {
     text-align: left;
-    margin-top: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  
-img {
-    max-width: 100%;
-    display: block;
   }
 
-.logomarca {
+  .logomarca {
     font-size: 50px;
     color: white;
-}
-
-/*      MENU      */
-.menu {
-    display: flex;
-    justify-content: center;
-   
-}
-
-ul{
-    list-style: none;
-}
-li {
-    padding: 30px;
-}
-li a {
-    color: white;
-    font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-decoration: none
-}
-
-li a:hover {
-    border-top: solid 4px red;
   }
 
 /*--------------------------------------------------*/ 
 /* SEÇÃO GRID 1                                     */
 /*--------------------------------------------------*/ 
-.grid1 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    margin: 0 auto;
-    padding: 10px;
+  .menu {
+    display: flex;
+    justify-content: center;
   }
-  
-  .grid1-item:nth-child(1) {
+/*--------------------------------------------------*/ 
+/* SEMANTICA HTLM                                   */
+/*--------------------------------------------------*/ 
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 5px;
+}
+ul{
+    list-style: none;
+}
+.menu li {
+    padding: 30px;
+  }
+.menu li a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none
+}
+.menu .icon {
+  display: none;
+}
+
+li a:hover {
+    border-top: solid 4px red;
+}
+
+/*--------------------------------------------------*/ 
+/* GRID DESTAQUES E NOTICIAS                        */
+/*--------------------------------------------------*/ 
+.destaques .grid1-item:nth-child(1) {
     grid-row: 1 / 3;
-  }
+}
   
-  .grid1-item {
+.destaques .grid1-item {
     display: grid;
-  }
+    
+}
   
-  .grid1-item img {
+.destaques .grid1-item img {
     grid-column: 1;
     grid-row: 1/3;
     align-self: end;
-  }
+}
   
-  .grid1-item p {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
+.destaques .grid1-item p {
+    background: rgba(0, 0, 0, 0.479);
+    padding: 10px;
     color: white;
     grid-column: 1;
     grid-row: 2;
-    align-self: end;
+    align-content: initial;
     margin: 0px;
-  }
+}
   
+.noticias > div:nth-child(n) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  align-items: center;
+  padding: 10px;
+}
+
+/*--------------------------------------------------*/ 
+/* Menu Responsivo                                       */
+/*--------------------------------------------------*/ 
+@media screen and (max-width: 800px) {
+  .menu li {display: none;}
+  .menu a.icon {
+    float: right;
+    display: block;
+  }
+}
