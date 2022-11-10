@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EAJ News</title>
     <link rel="stylesheet" href="css/style.css" />
-    <!-- Carrega o icone de menu para tela pequenas -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Carrega o icones -->
+    <script src="https://kit.fontawesome.com/ce267342cb.js" crossorigin="anonymous"></script>
     
 </head>
 <body>
+    
     <header class="header">
         <h1 class="logomarca"><span>EAJ News</span></h1>
         <ul class="menu" id="menuRe">
@@ -19,7 +20,7 @@
         <li><a href="#" title="Filmes"><span>FILMES</span></a></li>
         <li><a href="#" title="Musica"><span>MUSICA</span></a></li>
         <li><a href="#" title="Vivabem"><span>VIVABEM</span></a></li>
-        <a href="javascript:void(0);" class="icon" onclick="MenuResp()"><i class="fa fa-bars"></i></a>
+        <a href="javascript:void(0);" class="icon" onclick="MenuResp()"><i class="fa-solid fa-bars fa-2x"></i></a>
         </ul>
     </header>
     <div class="container">
@@ -76,22 +77,29 @@
           </section>
     </div>
     <footer class="footer">
-        <div class="parte1"><p>parte 1</p></div>
-        <div class="parte2">
-            <p>Powered by:</p>
+        <div class="discentes">
             <ul>
+                <p>Discentes:</p>
                 <li>Rafael Borba</li>
                 <li>Alan Martins</li>
-                <li>Lucas</li>
+                <li>Lucas Moura</li>
                 <li>João Victor</li>
             </ul>
            </div>
-        <div class="social"><p>Siga a EAJ News:</p></div>
+        <div class="social">
+          <ul>
+            <p>Siga a EAJ News:</p>
+            <li><i class="fa-brands fa-twitter fa-2x"></i></li>
+            <li><i class="fa-brands fa-facebook fa-2x"></i></li>
+            <li><i class="fa-brands fa-instagram fa-2x"></i></li>
+          </ul></div>
     </footer>
     <script>
       function MenuResp() {
         var x = document.getElementById("menuRe");
+        var y = domcument.getElementById
         if (x.className === "menu") {
+
           x.className += " responsive";
         } else {
           x.className = "menu";

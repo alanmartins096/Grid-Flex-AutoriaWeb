@@ -1,6 +1,7 @@
 body {
     margin: 0px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #F1E1D0;
 }
 .container {
     width: 80%;
@@ -31,10 +32,11 @@ body {
 }
 .titulo {
   border-bottom: 1px solid;
+  color: black;
 }
 .destaques {
     grid-area: secao1;
-    background-color: #E05DA1;
+    background-color: #4666D4;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
@@ -43,7 +45,7 @@ body {
  }
 .noticias {
   grid-area: secao2;
-  background-color: #38e66c;
+  background-color: #FF2927;
   display: grid;
   width: 100%;
   grid-template-columns: repeat(2, 1fr);
@@ -56,19 +58,31 @@ body {
         flex-wrap: wrap;
         justify-content:space-around;
         width: 100%;
-        height: 80px;
-        background-color: rgb(63, 63, 63);;
-        color: #fff;
+        background-color: #000000;
+
 
 }
-.parte1, .parte2, .parte3 {
-    width: 25%;
- }
+.footer ul {
+  display: flex;
+  align-items: center;
+  grid-gap: 10px;
+}
+.footer ul li {
+  margin-right: 10px;
+}
+.footer ul li:last-child {
+  margin-right: 0px;
+}
+
+.discentes {
+  justify-content:space-between;
+  width: 50%;
+}
 
 .social {
     flex-wrap: wrap;
+    width: 30%;
     align-items: center;
-    margin: -0.25rem;
     display: flex;
 } 
 
@@ -109,6 +123,7 @@ ul{
 }
 .menu .icon {
   display: none;
+  color: white;
 }
 
 li a:hover {
@@ -154,10 +169,48 @@ li a:hover {
 /*--------------------------------------------------*/ 
 /* Menu Responsivo                                       */
 /*--------------------------------------------------*/ 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1083px) {
+  .container {
+    width: 100%;
+  }
   .menu li {display: none;}
   .menu a.icon {
     float: right;
     display: block;
   }
+  .discentes {
+    display: none;
+  }
+  .social {
+    justify-content: center;
+    width: 100%;
+  }
+  .titulo {
+    padding-left: 10px;
+  }
+  .destaques {
+    grid-template-columns: repeat(2, 1fr)
+  }
+  .noticias {
+    grid-template-columns: repeat(1, 1fr)
+  }
+}
+
+@media screen and (max-width: 1083px) {
+  .header {
+    height: auto;
+    min-height: 180px;
+  }
+  .menu.responsive {position: relative;}
+  .mennu.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .menu.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
 }
