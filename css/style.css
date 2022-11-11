@@ -86,24 +86,11 @@ body {
     display: flex;
 } 
 
-h1 {
-    text-align: left;
-  }
-
 .logomarca {
     font-size: 50px;
     color: white;
   }
 
-
-  img {
-    max-width: 100%;
-    display: block;
-    border-radius: 5px;
-  }
-  ul{
-      list-style: none;
-  }
 /*--------------------------------------------------*/ 
 /* SEMANTICA HTLM                                   */
 /*--------------------------------------------------*/ 
@@ -118,6 +105,21 @@ h1 {
     font-size: 20px;
     text-decoration: none
 }
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 5px;
+}
+
+ul{
+  list-style: none;
+}
+
+h1 {
+  text-align: left;
+}
+
 .icon {
   display: none;
   color: white;
@@ -134,13 +136,13 @@ h1 {
 /*--------------------------------------------------*/ 
 /* GRID DESTAQUES E NOTICIAS                        */
 /*--------------------------------------------------*/ 
-.destaques .grid1-item:nth-child(1) {
-    grid-row: 1 / 3;
-}
-  
 .destaques .grid1-item {
     display: grid;
     
+}
+
+.destaques .grid1-item:nth-child(1) {
+  grid-row: 1 / 3;
 }
   
 .destaques .grid1-item img {
@@ -159,7 +161,7 @@ h1 {
     margin: 0px;
 }
   
-.noticias > div:nth-child(n) {
+.noticias > div {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
@@ -168,7 +170,7 @@ h1 {
 }
 
 /*--------------------------------------------------*/ 
-/* Menu Responsivo                                       */
+/* Responsivo                                       */
 /*--------------------------------------------------*/ 
 @media screen and (max-width: 1083px) {
   .container {
