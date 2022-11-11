@@ -90,44 +90,45 @@ h1 {
     text-align: left;
   }
 
-  .logomarca {
+.logomarca {
     font-size: 50px;
     color: white;
   }
 
-/*--------------------------------------------------*/ 
-/* SEÇÃO GRID 1                                     */
-/*--------------------------------------------------*/ 
-  .menu {
-    display: flex;
-    justify-content: center;
+
+  img {
+    max-width: 100%;
+    display: block;
+    border-radius: 5px;
+  }
+  ul{
+      list-style: none;
   }
 /*--------------------------------------------------*/ 
 /* SEMANTICA HTLM                                   */
 /*--------------------------------------------------*/ 
-img {
-  max-width: 100%;
-  display: block;
-  border-radius: 5px;
+.menu {
+  justify-content: center;
 }
-ul{
-    list-style: none;
-}
-.menu li {
-    padding: 30px;
+.menu a {
+    padding: 15px;
   }
-.menu li a {
+.menu a {
     color: white;
     font-size: 20px;
     text-decoration: none
 }
-.menu .icon {
+.icon {
   display: none;
   color: white;
 }
-
-li a:hover {
-    border-top: solid 4px red;
+.continue {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+}
+.menu a:hover {
+    border-top: solid 3px red;
 }
 
 /*--------------------------------------------------*/ 
@@ -173,12 +174,21 @@ li a:hover {
   .container {
     width: 100%;
   }
-  .menu li {display: none;}
+  .header {
+    height: auto;
+    min-height: 180px;
+  }
+  .menu {
+    display: block;
+    width: 100%;
+  }
+  .menu a {display: none;}
   .menu a.icon {
     float: right;
     display: block;
+    padding-right: 20px;
   }
-  .discentes {
+  .discentes, .logomarca {
     display: none;
   }
   .social {
@@ -197,12 +207,10 @@ li a:hover {
 }
 
 @media screen and (max-width: 1083px) {
-  .header {
-    height: auto;
-    min-height: 180px;
-  }
+
   .menu.responsive {position: relative;}
-  .mennu.responsive a.icon {
+  .menu.responsive a.icon {
+    align-items: center;
     position: absolute;
     right: 0;
     top: 0;
@@ -210,7 +218,7 @@ li a:hover {
   .menu.responsive a {
     float: none;
     display: block;
-    text-align: left;
+    align-items: center;
   }
-  
-}
+
+  }

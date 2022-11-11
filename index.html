@@ -14,14 +14,15 @@
     
     <header class="header">
         <h1 class="logomarca"><span>EAJ News</span></h1>
-        <ul class="menu" id="menuRe">
-        <li><a href="#" title="Eleições"><span>ELEIÇÕES</span></a></li>
-        <li><a href="#" title="Esportes"><span>ESPORTES</span></a></li>
-        <li><a href="#" title="Filmes"><span>FILMES</span></a></li>
-        <li><a href="#" title="Musica"><span>MUSICA</span></a></li>
-        <li><a href="#" title="Vivabem"><span>VIVABEM</span></a></li>
-        <a href="javascript:void(0);" class="icon" onclick="MenuResp()"><i class="fa-solid fa-bars fa-2x"></i></a>
-        </ul>
+        <div class="menu" id="menuRe">
+          <a href="#" title="Eleições"><span>ELEIÇÕES</span></a>
+          <a href="#" title="Esportes"><span>ESPORTES</span></a>
+          <a href="#" title="Filmes"><span>FILMES</span></a>
+          <a href="#" title="Musica"><span>MUSICA</span></a>
+          <a href="#" title="Vivabem"><span>VIVABEM</span></a>
+          <a href="javascript:void(0);" class="icon" onclick="MenuResp()"><i class="fa-solid fa-bars fa-3x"></i></a>
+        </div>
+        
     </header>
     <div class="container">
         
@@ -44,37 +45,37 @@
                 <p>Bolsonaro perde eleições 2022 no segundo turno.</p>
               </div>
             <div class="grid1-item">
-                <img src="./image/vespa2.jpg">
-                <p>Vespas 'ajudam' polícia a prender fugitivo na Alemanha.</p>
+                <img class="lula" src="./image/lulaaa.jpeg">
+                <p>Lula liga para Bolsonaro pedindo a senha do wifi do palacio da alvorada</p>
             </div>
         </section>
         <h1 class="titulo">Últimas notícias</h1>
         <section class="noticias">
             <div>
-              <img src="./image/bozotriste.jpg">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue commodo luctus. Cras placerat sit amet lorem at sagittis. Vestibulum placerat et diam at fermentum.</p>
+              <img src="./image/iron.jpeg">
+              <p>O Iron Maiden trará uma nova turnê para a Europa no verão de 2023, incluindo shows de arena no Reino Unido e na Irlanda. “The Future Past Tour” apresentará músicas inéditas do álbum de estúdio mais recente da banda</p>
             </div>
             <div>
-              <img src="./image/bozotriste.jpg">
-              <p>Proin ultricies massa sed eros iaculis, quis interdum velit fringilla. Curabitur mollis mi et metus lacinia, et pretium neque suscipit. Proin condimentum tellus ultricies erat euismod aliquet.</p>
+              <img src="./image/pantera.jpeg">
+              <p> Hipe level hard para a proxima estreia da marvel!</p>
             </div>
             <div>
-              <img src="./image/bozotriste.jpg">
-              <p>Duis mauris mi, pellentesque nec dolor eu, hendrerit pulvinar ante. Vestibulum et vehicula lacus. Curabitur ultrices, quam at consectetur convallis, eros nisi finibus risus, eget bibendum dolor urna et ligula.</p>
+              <img src="./image/adao.jpeg">
+              <p>The Rock, interpreta o protagonista de "Adão Negro", filme que será lançado nesta quinta-feira (20/10). O ator dá vida ao superpoderoso fortão e malvado dos gibis da DC Comics, que nos cinemas vira uma espécie de anti-herói agressivo.</p>
             </div>
             <div>
-              <img src="./image/bozotriste.jpg">
-              <p>Suspendisse interdum congue massa. Mauris non rutrum lectus, faucibus pulvinar mi. Praesent tincidunt quis mauris ut vestibulum. Integer sapien sem, iaculis nec viverra sit amet, sagittis venenatis arcu.</p>
+              <img src="./image/obina.jpeg">
+              <p>Quem lembra? Ôoo, Obina é melhor que Eto'o!!!. O jogador camaronês foi um dos grandes nomes do futebol mundial e de seu país. Porém, ele ficou muito conhecido no Brasil pela comparação com o, também ex-jogado, Obina.</p>
             </div>
             <div>
-              <img src="./image/bozotriste.jpg">
-              <p>Ut vel hendrerit ante. Donec sed quam dignissim lorem egestas feugiat nec vel est. Nunc ultricies erat augue, a bibendum quam pretium quis.</p>
+              <img src="./image/vasco.jpeg">
+              <p>Será qu esse daí sobe para a serie "A" um dia?</p>
             </div>
             <div>
-              <img src="./image/bozotriste.jpg">
-              <p>Nulla est dui, viverra et lacus vehicula, condimentum finibus sem. Duis eu quam a nisl bibendum sodales sit amet vel erat. Nulla at libero dui.</p>
+              <img src="./image/planet.jpeg">
+              <p>Após 10 anos separados, com shows no Planeta em Santa Catarina (nesta sexta-feira e sábado) e no Rio Grande do Sul (1 e 2 de fevereiro). Vai ser a última oportunidade de ver Marcelo D2, BNegão, Rafael, Formigão e Pedrinho juntos</p>
             </div>
-          </section>
+        </section>
     </div>
     <footer class="footer">
         <div class="discentes">
@@ -97,7 +98,6 @@
     <script>
       function MenuResp() {
         var x = document.getElementById("menuRe");
-        var y = domcument.getElementById
         if (x.className === "menu") {
 
           x.className += " responsive";
